@@ -8,17 +8,46 @@
     tools:context="com.example.antons.mediaplayer.MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/play"
+    <ImageView
+        android:layout_margin="16dp"
+        android:id="@+id/cover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="play"
-        />
+        android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/stop"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/play_button"
+            />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_button"/>
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/pause_button"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Stop"/>
+        android:id="@+id/songInfo"/>
+
+
 
 </LinearLayout>
